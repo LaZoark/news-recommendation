@@ -354,7 +354,8 @@ if __name__ == '__main__':
                         path.join(train_dir, 'user2int.tsv'))
     else: print('Skip [Parse behaviors for train]')
 
-    if not path.exists(path.join(train_dir, 'news_parsed.tsv')):
+    # if not path.exists(path.join(train_dir, 'news_parsed.tsv')):
+    if True:
         print('Parse news')
         parse_news(path.join(train_dir, 'news.tsv'),
                    path.join(train_dir, 'news_parsed.tsv'),
@@ -392,7 +393,8 @@ if __name__ == '__main__':
     else:
         print(f'\n[{val_dir=}] not exist. Skipping [Process data for validation]')
 
-    if not path.exists(path.join(test_dir, 'news_parsed.tsv')):
+    # if not path.exists(path.join(test_dir, 'news_parsed.tsv')):
+    if True:
       print('\nProcess data for test')
       print('Parse news')
       parse_news(path.join(test_dir, 'test_news.tsv'),

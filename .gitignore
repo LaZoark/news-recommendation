@@ -20,3 +20,4 @@ runs/
 checkpoint*/
 __pycache__/
 src/results.csv
+src/run.sh
