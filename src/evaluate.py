@@ -287,7 +287,7 @@ if __name__ == '__main__':
         print('No checkpoint file found!')
         exit()
     print(f"Load saved parameters in {checkpoint_path}")
-    checkpoint = torch.load(checkpoint_path)
+    checkpoint = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
     # auc, mrr, ndcg5, ndcg10 = evaluate(model, './data/test',
